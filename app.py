@@ -21,7 +21,6 @@ browser = webdriver.Chrome(options=options)
 
 browser.maximize_window()
 
-
 # Get the web page
 browser.get(url)
 
