@@ -1,6 +1,5 @@
 import sys
 import ctypes
-from urllib.parse import urlparse
 from tkinter import filedialog
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -32,9 +31,6 @@ page_height = browser.execute_script(
 browser.set_window_size(screen_width, page_height)
 
 page_body = browser.find_element(By.TAG_NAME, 'body')
-
-# Extract the domain name from the given url
-domain_name = urlparse(url).netloc
 
 # Select a directory to save the file
 file_name = filedialog.asksaveasfilename(filetypes=[('PNG', '*.png')])
